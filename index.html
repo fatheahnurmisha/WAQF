@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Official website of Selangor Waqaf Corporation, providing information about waqf management, news, and corporate details.">
+  <meta name="keywords" content="Selangor Waqaf Corporation, waqf management, news, annual report, organization chart, Islamic endowment">
+  <meta name="author" content="Ummi Sulaim & Fatheah Nurmisha">
+
+  <style>
+    /* CSS styles for additional customization */
+    #band {
+      background-image: url('https://www.w3schools.com/w3images/band.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 64px 0;
+    }
+    #band h2, #band p, #band h3 {
+      color: #ffffff;
+    }
+    .w3-opacity {
+      color: #d1d1d1 !important;
+    }
+    .w3-round {
+      border-radius: 10%;
+    }
+    .w3-hover-opacity:hover {
+      opacity: 0.6 !important;
+    }
+    .w3-padding-32 {
+      padding: 32px !important;
+    }
+    .w3-xlarge i {
+      margin-right: 8px;
+    }
+    .mySlides {
+      display: none;
+    }
+    /* New Slideshow Styles */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    .active {
+      background-color: #717171;
+    }
+    .fade {
+      animation-name: fade;
+      animation-duration: 0.1s;
+    }
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    /* CSS for styling the footer */
+    .footer {
+      background-color: #ffffff; /* White background */
+      color: #000000; /* Black text */
+      padding: 32px 0; /* Padding top and bottom */
+      text-align: center; /* Center align text */
+      border-top: 1px solid #ccc; /* Gray border on top */
+    }
+    .footer a {
+      text-decoration: none; /* Remove underline from links */
+      color: #000000; /* Black text color */
+    }
+    /* Additional styles for the top navigation */
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .topnav a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-in-out; /* Smooth animation curve */
+    }
+
+    @keyframes fade {
+      from {opacity: 0} 
+      to {opacity: 1}
+    }
+
+    /* Additional styles for the navbar */
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .subnav {
+      float: left;
+      overflow: hidden;
+    }
+
+    .subnav .subnavbtn {
+      font-size: 17px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover, .subnav:hover .subnavbtn {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .subnav-content {
+      display: none;
+      position: absolute;
+      left: 0;
+      background-color: green;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .subnav-content a {
+      float: none;
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .subnav-content a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .subnav:hover .subnav-content {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+
+<<!-- Top Navigation -->
+<div class="navbar">
+  <a href="#" class="active">HOME</a>
+  <div class="subnav">
+    <button class="subnavbtn">ABOUT PWS <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+        <a href="CONTACT US.html">CONTACT</a>
+        <a href="ANNUAL REPORT.html">PWS ANNUAL REPORT</a>
+        <a href="OC.html">ORGANIZATION CHART</a>
+    </div>
+</div>
+  <div class="subnav">
+    <button class="subnavbtn">NEWS <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="MEDIA REPORT.html">MEDIA REPORT</a>
+      <a href="NEWS PWS.html">NEWS ABOUT PWS</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">WAQF INFORMATION <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="WAQAF DEFINITION.html">WAQF DEFINITION</a>
+      <a href="PROSEDURE.html">WAQF PARTICIPATION PROCEDURE</a>
+      <a href="FATWA.html">FATWA COMPILATION</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">ARCHIVED <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="HTTRACKCONNIFIER.html">HTTRACK & WARC</a>   
+    </div>
+  </div>
+</div>
+
+
+<!-- Main content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- New Slideshow -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="https://www.wakafselangor.gov.my/wp-content/uploads/2023/09/logoPWShitam200.png" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://www.wakafselangor.gov.my/wp-content/uploads/2023/09/logoPWShitam200.png" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://www.wakafselangor.gov.my/wp-content/uploads/2023/09/logoPWShitam200.png" style="width:100%">
+    </div>
+  </div>
+
+  <!-- SELANGOR WAQF COPERATION SECTION -->
+  <div id="band" class="w3-container w3-content w3-center w3-black" style="max-width:1300px; background: rgba(1, 0, 0); color: white; border-radius: 50px;">
+    <h2 class="w3-wide">SELANGOR WAQF CORPORATION</h2>
+    <p class="w3-wide"><h3>Welcome to the official website of Selangor Waqf Corporation. Explore our platform to discover comprehensive information about waqf management, stay updated with the latest news, and delve into our corporate insights. We are dedicated to serving our community through effective waqf initiatives and transparent governance. Join us in fostering sustainable development and preserving Islamic endowments for future generations.</h3></p>
+  </div>
+
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+</div>
+
+<!-- BUTTON HERE -->
+<div class="w3-black" id="tour">
+  <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-container w3-white">
+        <p><b>ARCHIVED</b></p>
+        <a href="HTTRACKCONNIFIER.html" class="home-link">
+          <button class="w3-button w3-black w3-margin-bottom">CLICK HERE!</button>
+        </a>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-container w3-white">
+        <p><b>ABOUT US</b></p>
+        <a href="ABOUT US.html" class="home-link">
+          <button class="w3-button w3-black w3-margin-bottom">CLICK HERE!</button>
+        </a>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-container w3-white">
+        <p><b>CORPORATE INFORMATION</b></p>
+        <a href="ESTABLISHMENT.html" class="home-link">
+          <button class="w3-button w3-black w3-margin-bottom">CLICK HERE!</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="w3-container w3-padding-64 w3-center">
+    <p>Copyright © 2024 Ummi Sulaim & Fatheah Nurmisha</p>
+    <p>This website is for the purpose of assignment on Web Archiving (ICM561) only</p>
+  </div>
+</footer>
+
+<script>
+// Slideshow Script
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; dots && i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  if (slides[slideIndex-1]) {
+    slides[slideIndex-1].style.display = "block";  
+    if (dots[slideIndex-1]) {
+      dots[slideIndex-1].className += " active";
+    }
+  }
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+// Toggle between showing and hiding the navigation menu links when the user clicks on the menu icon
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

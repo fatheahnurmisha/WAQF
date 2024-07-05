@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website with Tables</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.wakafselangor.gov.my/wp-content/uploads/2023/09/wakafcenter2.jpg');
+            background-size: cover; /* Ensure background covers entire body */
+            background-repeat: no-repeat;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: center; /* Center the content horizontally */
+            margin-bottom: 100px; /* Adjust margin to prevent footer overlap */
+        }
+        .main-content {
+            flex: 3;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        .footer {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        td a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        td a:hover {
+            text-decoration: underline;
+        }
+        tr:hover {
+            background-color: #f2f2f2; /* Warna latar belakang saat dihover */
+        }
+        .back-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        /* Additional styles for the navbar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .subnav {
+            float: left;
+            overflow: hidden;
+        }
+
+        .subnav .subnavbtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover, .subnav:hover .subnavbtn {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .subnav-content {
+            display: none;
+            position: absolute;
+            left: 0;
+            background-color: green;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .subnav-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .subnav-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .subnav:hover .subnav-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<!-- Top Navigation -->
+<div class="navbar">
+    <a href="index.html">HOME</a>
+    <div class="subnav">
+        <button class="subnavbtn">ABOUT PWS <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="CONTACT US.html">CONTACT</a>
+            <a href="ANNUAL REPORT.html">PWS ANNUAL REPORT</a>
+            <a href="OC.html">ORGANIZATION CHART</a>
+        </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn">NEWS <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="MEDIA REPORT.html">MEDIA REPORT</a>
+            <a href="NEWS PWS.html">NEWS ABOUT PWS</a>
+        </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn">WAQF INFORMATION <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="WAQAF DEFINITION.html">WAQF DEFINITION</a>
+            <a href="PROSEDURE.html">WAQF PARTICIPATION PROCEDURE</a>
+            <a href="FATWA.html">FATWA COMPILATION</a>
+        </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn">ARCHIVED <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="HTTRACKCONNIFIER.html">HTTRACK & WARC</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="main-content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Article Title</th>
+                    <th>Summary</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bilangan 1/2012</td>
+                    <td>Selangor Waqf Corporation Bulletin MAIS 2012</td>
+                    <td><a href="PWS/BILANGAN 1 (2012)/index.html">Read more</a></td>
+                </tr>
+                <tr>
+                    <td>Bilangan 1/2013</td>
+                    <td>Selangor Waqf Corporation Bulletin MAIS 2013</td>
+                    <td><a href="PWS/BILANGAN 1 (2013)/index.html">Read more</a></td>
+                </tr>
+                <tr>
+                    <td>Bilangan 1/2014</td>
+                    <td>Selangor Waqf Corporation Bulletin MAIS 2014.</td>
+                    <td><a href="PWS/BILANGAN 1 (2014)/index.html">Read more</a></td>
+                </tr>
+                <tr>
+                    <td>Bilangan 2/2012</td>
+                    <td>Selangor Waqf Corporation Bulletin MAIS 2012 (PART2)</td>
+                    <td><a href="PWS/BILANGAN 2 (2012)/index.html">Read more</a></td>
+                </tr>
+                <tr>
+                    <td>Bilangan 2/2013</td>
+                    <td>Selangor Waqf Corporation Bulletin MAIS 2013 (PART2)</td>
+                    <td><a href="PWS/BILANGAN 2 (2013)/index.html">Read more</a></td>
+                </tr>
+                <!-- Repeat rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>Copyright © 2024 Ummi Sulaim & Fatheah Nurmisha</p>
+    <p>This website is for the purpose of an assignment on Web Archiving (ICM561) only</p>
+</footer>
+
+</body>
+</html>

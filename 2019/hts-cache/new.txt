@@ -1,0 +1,2 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+12:41:08	6563050/6563050	---M--	200	added ('OK')	application/pdf	etag:%226424ea-6074299753fd0%22	https://www.wakafselangor.gov.my/Downloads/PWS-2019.pdf	C:/PWS/2019/www.wakafselangor.gov.my/Downloads/PWS-2019.pdf	(from )

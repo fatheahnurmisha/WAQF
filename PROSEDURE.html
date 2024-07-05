@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Boxes Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.wakafselangor.gov.my/wp-content/uploads/2023/09/wakafcenter2.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            text-align: center; /* Center align all text within body */
+            padding-bottom: 80px; /* Ensure space below boxes for footer */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-top: 120px; /* Increase margin-top to create space for the header */
+        }
+        .box {
+            width: 1000px;
+            max-width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 10px; /* Corrected padding value */
+            box-sizing: border-box;
+            opacity: 0;
+            animation: slideIn 1s forwards;
+            text-align: center; /* Center align text within box */
+        }
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 3px 0;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            z-index: 100;
+        }
+        .home-button:hover {
+            background-color: #555;
+        }
+        .read-more-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto 0; /* Adjusted to ensure it's below the text */
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .read-more-button:hover {
+            background-color: #555;
+        }
+/* Additional styles for the navbar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .subnav {
+            float: left;
+            overflow: hidden;
+        }
+
+        .subnav .subnavbtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover, .subnav:hover .subnavbtn {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .subnav-content {
+            display: none;
+            position: absolute;
+            left: 0;
+            background-color: green;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .subnav-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .subnav-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .subnav:hover .subnav-content {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<!-- Top Navigation -->
+<div class="navbar">
+    <a href="index.html">HOME</a>
+    <div class="subnav">
+        <button class="subnavbtn">ABOUT PWS <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="CONTACT US.html">CONTACT</a>
+            <a href="ANNUAL REPORT.html">PWS ANNUAL REPORT</a>
+            <a href="OC.html">ORGANIZATION CHART</a>
+        </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn">NEWS <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="MEDIA REPORT.html">MEDIA REPORT</a>
+            <a href="NEWS PWS.html">NEWS ABOUT PWS</a>
+        </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn">WAQF INFORMATION <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="WAQAF DEFINITION.html">WAQF DEFINITION</a>
+            <a href="PROSEDURE.html">WAQF PARTICIPATION PROCEDURE</a>
+            <a href="FATWA.html">FATWA COMPILATION</a>
+        </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn">ARCHIVED <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="HTTRACKCONNIFIER.html">HTTRACK & WARC</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="box box1">
+        <h2>Cash Waqf</h2>
+        <p>One off/Payroll deduction@Autodebit/Corporate friend/Gold/Salary</p>
+        <a href="/pws%20coding/PWS/WAQF%20PARTICIPATION%20PROCEDURE/www.wakafselangor.gov.my/prosedur/index.html" class="read-more-button">Read More</a>
+    </div>
+    <div class="box box2">
+        <h2>Special Waqf</h2>
+        <p>Special Waqf Collection Procedure / Opening a Special Waqf Account is a method to collect waqf funds authorized by the Selangor Waqf Corporation (PWS) for the development and construction of mosques and suraus that are not included in the Malaysia Plan (RMK).</p>
+        <a href="/pws%20coding/PWS/WAQF%20PARTICIPATION%20PROCEDURE/www.wakafselangor.gov.my/prosedur/index.html" class="read-more-button">Read More</a>
+    </div>
+</div>
+
+<footer>
+   <p>Copyright © 2024 Ummi Sulaim & Fatheah Nurmisha</p>
+   <p>This website is for the purpose of an assignment on Web Archiving (ICM561) only</p>
+</footer>
+
+</body>
+</html>

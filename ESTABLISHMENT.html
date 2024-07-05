@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Template</title>
+    <style>
+        /* Basic CSS styles can go here */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.wakafselangor.gov.my/wp-content/uploads/2023/09/wakafcenter2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1px 0;
+            text-align: center;
+            position: relative;
+        }
+        .timeline {
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 350px; /* Adjust max-height as needed */
+        }
+        .event {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            position: relative; /* Position for animation */
+            animation: slideIn 1s ease-out; /* Animation settings */
+        }
+        .event:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .event h2 {
+            font-size: 1.5em;
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            display: inline-block;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .event p {
+            font-size: 1.2em;
+        }
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .back-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px; /* Adjusted to align left */
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline from anchor */
+            display: inline-block; /* Ensure it behaves like a block element */
+        }
+        .back-btn:hover {
+            background-color: #555;
+        }
+        .read-more-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .read-more-btn:hover {
+            background-color: #555;
+        }
+        .about-us {
+            background-image: url('https://www.wakafselangor.gov.my/wp-content/uploads/2023/09/wakafcenter2.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            color: #fff; /* Set text color to white for better contrast */
+        }
+        @keyframes moveFromTop {
+            0% {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        #vision {
+            animation: moveFromTop 1s ease-in-out 0s 1 normal forwards;
+        }
+        #mission {
+            animation: moveFromTop 1s ease-in-out 0.5s 1 normal forwards;
+        }
+        #motto {
+            animation: moveFromTop 1s ease-in-out 1s 1 normal forwards;
+        }
+        /* Additional styles for the navbar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .subnav {
+            float: left;
+            overflow: hidden;
+        }
+
+        .subnav .subnavbtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover, .subnav:hover .subnavbtn {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .subnav-content {
+            display: none;
+            position: absolute;
+            left: 0;
+            background-color: green;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .subnav-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .subnav-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .subnav:hover .subnav-content {
+            display: block;
+        }
+
+        .section-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-box h2 {
+            font-size: 1.5em;
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            display: inline-block;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .section-box p {
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="navbar">
+        <a href="index.html">HOME</a>
+        <div class="subnav">
+            <button class="subnavbtn">ABOUT PWS <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="CONTACT US.html">CONTACT</a>
+                <a href="ANNUAL REPORT.html">PWS ANNUAL REPORT</a>
+                <a href="OC.html">ORGANIZATION CHART</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">NEWS <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="MEDIA REPORT.html">MEDIA REPORT</a>
+                <a href="NEWS PWS.html">NEWS ABOUT PWS</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">WAQF INFORMATION <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="WAQAF DEFINITION.html">WAQF DEFINITION</a>
+                <a href="PROSEDURE.html">WAQF PARTICIPATION PROCEDURE</a>
+                <a href="FATWA.html">FATWA COMPILATION</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">ARCHIVED <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="HTTRACKCONNIFIER.html">HTTRACK & WARC</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline">
+        <div class="event">
+            <h2>30/10/2009</h2>
+            <p>DYMM Tuanku Sultan of Selangor ordered MAIS to establish the Selangor Waqf Corporation (PWS) so that waqf management can be empowered like zakat management</p>
+        </div>
+        <div class="event">
+            <h2>08/02/2010</h2>
+            <p>MAIS Waqf Management Committee Meeting No. 1/2010 which convened on 8 February 2010 has decided to establish PWS in accordance with the orders of His Majesty the Sultan of Selangor and the Islamic Religious Administration Enactment (State of Selangor) 2003 Amendment 2008</p>
+        </div>
+        <div class="event">
+            <h2>29/06/2010</h2>
+            <p>MAIS Meeting No. 3/2010 which convened on 29 June 2010 has agreed to establish PWS under the provisions of Section 8, Enactment of Administration of Islamic Religion (Selangor State) 2003 Amendment 2008</p>
+        </div>
+        <div class="event">
+            <h2>05/10/2010</h2>
+            <p>MAIS Meeting No. 4/2010 which convened on 5 October 2010 agreed with the proposed appointment of the Chairman and General Manager of PWS</p>
+        </div>
+        <div class="event">
+            <h2>03/02/2011</h2>
+            <p>The Selangor Waqf Corporation Establishment Order 2011 was approved by His Majesty the Sultan of Selangor on 11 January 2011 and gazetted</p>
+        </div>
+        <a href="/pws%20coding/PWS/HISTORY/www.wakafselangor.gov.my/sejarah/index.html" class="read-more-btn">Read More</a> <!-- Added Read More button -->
+
+        <div class="about-us">
+            <div class="section-box" id="vision">
+                <h2>VISION</h2>
+                <p>Honoring superior Waqf Institutions based on Al-Quran, Al-Hadith and Sharia law.</p>
+            </div>
+            <div class="section-box" id="mission">
+                <h2>MISSION</h2>
+                <p>Moving with the Ummah through the cultivation of waqf in catalyzing the development of Islam from the economic and social aspects.</p>
+            </div>
+            <div class="section-box" id="motto">
+                <h2>MOTTO</h2>
+                <p>Waqf for Developing the Ummah</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+           <p>Copyright © 2024 Ummi Sulaim & Fatheah Nurmisha</p>
+           <p>This website is for the purpose of an assignment on Web Archiving (ICM561) only</p>
+        </div>
+    </footer>
+
+</body>
+</html>
